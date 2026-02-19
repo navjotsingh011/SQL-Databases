@@ -20,8 +20,8 @@ jobs:
           commit-message: "PR for database related changes"
           title: "Auto PR Database changes"
           body: "Auto-generated PR from development."
-          branch: Development
-          base: main
+          branch: main
+          base: Development
           assignees: |
             ankurbanga4050
             rohitranout889
