@@ -24,9 +24,3 @@ jobs:
           body: Auto-generated PR from development.
           branch: Development
           base: main
-          assignees: |
-            ankurbanga4050
-            rohitranout889
-          reviewers: |
-            ankurbanga4050
-            rohitranout889
