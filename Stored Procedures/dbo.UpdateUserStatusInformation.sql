@@ -3,7 +3,6 @@ GO
 SET ANSI_NULLS ON
 GO
 
-
 CREATE   PROCEDURE  [dbo].[UpdateUserStatusInformation]
 (
 @UserId BIGINT
@@ -12,7 +11,7 @@ CREATE   PROCEDURE  [dbo].[UpdateUserStatusInformation]
 AS 
 BEGIN
 	DECLARE @Result INT = 0
-	IF EXISTS (SELECT 1 FROM [User] WHERE UserId = @UserId AND IsActive = 1)
+	IF EXISTS (SELECT 1 FROM [User] WHERE UserId = @UserId AND IsActive = 1 AND IsDeleted = 0)
 		BEGIN	
 			UPDATE [User] SET
 			Status = @Status
@@ -25,6 +24,5 @@ BEGIN
 			SET @Result = 2
 		END
 END
-
 
 GO
